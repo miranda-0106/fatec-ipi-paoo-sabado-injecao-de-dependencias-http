@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div>
+    <div class="col-md-4 form-group"> 
+      <label for="cidadeInput">Informe uma cidade:</label>
+      <input #cidadeInput type="text" class="form-control" id="cidadeInput" #cidadeInput>
+    </div>
+
+    <div class="row">
+        <div class="col-2" style="margin-left:15px;"> 
+            <button class="btn btn-primary btn-block" (click)="consultar(cidadeInput)">Pesquisar</button>
+        </div> 
+    </div>
+  </div>
+
+  <div class="row">
+    <app-previsao class="col-lg-4" *ngFor="let previsao of previsoes" [previsao]="previsao"></app-previsao>
+  </div>
+
+</div>
